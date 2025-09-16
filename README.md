@@ -2,7 +2,7 @@
 VHDL components for a Matrix Multiplication/Neural Network Accelerator.
 
 <p align="center">
- <image src="https://github.com/aiaskarioris/mm_fpga_accelerator/images/banner.png" alt="banner"></image>
+ <image src="https://github.com/aiaskarioris/mm_fpga_accelerator/blob/master/images/banner.png?raw=true" alt="banner"></image>
 </p>
 
 ## Introduction
@@ -11,7 +11,7 @@ This repository contains VHDL source code for a number of digital design compone
 The accelerator is primarily used in two different methods: the *Matrix Multiplication Mode (MM)* and the *AI Mode*. Despite the name, MM Mode implements a vector-by-matrix multiplication. To use the accelerator the PS must first supply the input vector via the AXI-Stream input interface and then transmit the input matrix via the same interface. While the matrix is being transferred the accelerator performs the necessary operations as such that by the end of the matrix's transmission, only a short latency period occurs before the results are sent back to PS.
 
 <p align="center">
- <image src="https://github.com/aiaskarioris/mm_fpga_accelerator/images/core_logic_arch.png" alt="components"></image>
+ <image src="https://github.com/aiaskarioris/mm_fpga_accelerator/blob/master/images/core_logic_arch.png?raw=true" alt="components"></image>
 </p>
 
 AI Mode performs two vector-by-matrix multiplications and sums the results in addition to a bias vector. This operation is encountered in LSTM networks, within LSTM cells. Afterwards, the final result can pass through an activation function (e.g. sigmoid), which is implemented using a look-up table. The look-up table must be supplied by PS and the accelerator is set up to have two store tables, thus allowing fast switching between the two.
