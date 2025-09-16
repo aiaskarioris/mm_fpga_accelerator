@@ -241,7 +241,7 @@ begin
 		dout_ready <= '1';
 		wait until dout_valid = '0';
 
-		-- Done:)
+		-- Done
 		simulation_step <= sim_ended;
 		wait until false;
 

@@ -4,7 +4,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.NUMERIC_STD_UNSIGNED.ALL;
 
--- Simple Mode Test: This simulation doesn't focus on valid signals
+-- Post Implementation Simulation
 
 entity corelogic_sim is
 	generic(g_clock_period: time:= 6 ns);
@@ -280,7 +280,7 @@ begin
 		wait for 256/4*g_clock_period;
 		dout_ready <= '0';
 
-		-- Done:)
+		-- Done
 		simulation_step <= sim_ended;
 		wait until false;
 
